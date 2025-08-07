@@ -1,0 +1,47 @@
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f54932;
+    padding: 12px 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+    font-size: 22px;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll-left 40s linear infinite;
+}
+
+.marquee-track span {
+    color: #fff;
+}
+.circle-track {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%);
+    }
+}
+@media (max-width: 890px) {
+    .marquee {
+        font-size: 16px;
+        height: 40px;
+    }
+}

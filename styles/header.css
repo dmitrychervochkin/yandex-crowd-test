@@ -1,0 +1,293 @@
+header {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    background-color: #e6cfba;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: url("../public/images/header-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color-burn;
+    opacity: 0.3;
+}
+
+header > div > .header-content,
+.header-logo {
+    position: relative;
+    z-index: 4;
+}
+
+.header-container {
+    padding: 20px 60px;
+    margin: 0 auto;
+    max-width: 1600px;
+    height: 100%;
+    position: relative;
+}
+.header-logo {
+    width: 245px;
+    height: 36px;
+    margin-bottom: 50px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 542px;
+    color: #313131;
+}
+
+.header-headline {
+    font-family: "Merriweather", sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 110%;
+}
+.header-headline p:last-child {
+    text-align: center;
+}
+.header-center-text {
+    font-size: 18px;
+    text-align: center;
+    line-height: 130%;
+}
+.header-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-circle {
+    position: absolute;
+    background-color: #fbce51;
+    border-radius: 50%;
+    width: 634px;
+    height: 634px;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.circle-text-svg {
+    width: 100%;
+    height: 100%;
+    animation: rotateCircle 60s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header-images-container > * {
+    position: absolute;
+}
+.header-images-container {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: -10px;
+    width: 1600px;
+    height: 100%;
+}
+
+.city-image,
+.path-image {
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.path-image {
+    right: 20px;
+    animation: vibrationSimple1 2s infinite ease-in-out;
+}
+.city-image {
+    animation: vibrationSimple2 2.5s infinite ease-in-out;
+}
+
+.king-image {
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    z-index: 1;
+    animation: vibrationRotate1 1.8s infinite ease-in-out;
+}
+
+.queen-image {
+    position: absolute;
+    right: 300px;
+    bottom: 260px;
+    z-index: 1;
+    animation: vibrationRotate2 2.2s infinite ease-in-out;
+}
+
+.pawn-image {
+    position: absolute;
+    right: 190px;
+    bottom: 20px;
+    z-index: 15;
+    animation: vibrationRotate1 2.3s infinite ease-in-out;
+}
+
+.horse-image {
+    position: absolute;
+    right: 450px;
+    bottom: 0;
+    z-index: 15;
+    animation: vibrationRotate2 1.9s infinite ease-in-out;
+}
+
+@keyframes vibrationSimple1 {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(2px, -2px);
+    }
+    60% {
+        transform: translate(-2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+}
+
+@keyframes vibrationSimple2 {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(2px, -2px);
+    }
+    40% {
+        transform: translate(-2px, 2px);
+    }
+    60% {
+        transform: translate(2px, -2px);
+    }
+    80% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+@keyframes vibrationRotate1 {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+        transform: translate(-3px, -1px) rotate(-5deg);
+    }
+    40% {
+        transform: translate(3px, 1px) rotate(5deg);
+    }
+    60% {
+        transform: translate(-3px, -1px) rotate(-5deg);
+    }
+    80% {
+        transform: translate(3px, 1px) rotate(5deg);
+    }
+}
+
+@keyframes vibrationRotate2 {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+        transform: translate(1px, 3px) rotate(5deg);
+    }
+    40% {
+        transform: translate(-1px, -3px) rotate(-7deg);
+    }
+    60% {
+        transform: translate(1px, 3px) rotate(2deg);
+    }
+    80% {
+        transform: translate(-1px, -3px) rotate(-5deg);
+    }
+}
+
+@media (max-width: 890px) {
+    .header-container {
+        padding: 20px;
+    }
+    .header-logo {
+        width: 245px;
+        height: 36px;
+        margin-bottom: 30px;
+    }
+    .header-content {
+        gap: 30px;
+        width: 100%;
+    }
+
+    .header-headline {
+        font-size: 36px;
+    }
+    .header-center-text {
+        text-align: start;
+    }
+    .header-btns {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .header-circle {
+        width: 300px;
+        height: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
+        top: auto;
+    }
+    .header-images-container {
+        width: 800px;
+    }
+    .path-image {
+        right: 10px;
+    }
+    .king-image {
+        width: 70px;
+        left: 50%;
+        bottom: 80px;
+    }
+
+    .queen-image {
+        width: 70px;
+        right: 180px;
+        bottom: 150px;
+    }
+
+    .pawn-image {
+        right: 0;
+    }
+
+    .horse-image {
+        width: 100px;
+        right: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+}

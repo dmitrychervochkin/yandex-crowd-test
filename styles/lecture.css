@@ -1,0 +1,65 @@
+.lecture {
+    display: flex;
+    padding: 80px 60px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+.lecture-text {
+    font-family: "Merriweather", sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: #313131;
+    text-transform: uppercase;
+}
+.lecture-text-visible {
+    display: none;
+}
+.lecture-text .red-color {
+    color: #f54932;
+    font-weight: 400;
+}
+.lecture-img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+@media (max-width: 890px) {
+    .lecture {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 20px;
+    }
+    .lecture-text {
+        font-size: 28px;
+        width: 100%;
+    }
+    .lecture-img {
+        width: 100%;
+    }
+    .lecture-text-invisible {
+        display: none;
+    }
+    .lecture-text-visible {
+        display: block;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

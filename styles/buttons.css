@@ -1,0 +1,73 @@
+.button-default {
+    width: 263px;
+    height: 72px;
+    padding: 20px 20px;
+    font-size: 16px;
+    border-radius: 66px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+    line-height: 130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-default > span {
+    width: 165px;
+}
+.fill-btn {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+.fill-btn:hover {
+    background-color: #fbce51;
+    color: #1f1f1f;
+}
+.outline-btn {
+    background-color: transparent;
+    border: 2px solid #1f1f1f;
+    color: #1f1f1f;
+}
+.outline-btn:hover {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.button-s {
+    background-color: white;
+    font-size: 16px;
+    border-radius: 62px;
+    border: 1px solid #3057a2;
+    color: #3057a2;
+    padding: 12px;
+    transition: color 0.2s, backgorund-color 0.2s;
+}
+.button-s:hover {
+    cursor: pointer;
+    background-color: #3057a2;
+    color: white;
+}
+
+@media (max-width: 890px) {
+    .button-default {
+        width: 100%;
+        height: 47px;
+        padding: 18px 20px;
+        font-size: 16px;
+        border-radius: 66px;
+        border: none;
+        cursor: pointer;
+        transition: color 0.2s, background-color 0.2s;
+        line-height: 130%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-default > span {
+        width: 100%;
+    }
+    .outline-btn {
+        background-color: #ffffff90;
+        border: none;
+    }
+}

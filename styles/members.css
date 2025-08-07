@@ -1,0 +1,110 @@
+.members {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+}
+.members-header {
+    font-family: "Merriweather", sans-serif;
+    font-size: 54px;
+    font-weight: 300;
+    color: #313131;
+    text-transform: uppercase;
+
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: start;
+    width: auto;
+}
+.members-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    width: auto;
+}
+
+.members-main {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    grid-column: 1 / -1;
+
+    overflow: hidden;
+    width: 100%;
+    margin: 50px 0;
+}
+.slider-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    gap: 20px;
+}
+.member {
+    flex: 0 0 calc((100% - 40px) / 3); /* 3 карточки + 2 gap по 20px */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.count {
+    display: flex;
+    gap: 5px;
+}
+.count p {
+    color: #a2a2a2;
+}
+.member-img {
+    width: 320px;
+    margin: 20px 0;
+}
+.member-name {
+    font-size: 24px;
+}
+.member-status {
+    font-size: 20px;
+    color: #15151580;
+    font-weight: 300;
+}
+
+@media (max-width: 890px) {
+    .members {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    .members-header {
+        font-size: 36px;
+        order: 1;
+    }
+    .members-main {
+        order: 2;
+        overflow: hidden;
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .members-actions {
+        order: 3;
+        margin: 0 auto;
+    }
+    .member {
+        min-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .slider-track {
+        display: flex;
+        gap: 20px; /* если нужен отступ между карточками */
+        transition: transform 0.3s ease;
+    }
+    .member-img {
+        width: calc(100% - 100px);
+    }
+}
