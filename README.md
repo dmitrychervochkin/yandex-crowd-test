@@ -60,4 +60,4 @@ git clone https://github.com/dmitrychervochkin/yandex-crowd-test.git
 ---
 
 ![Превью](./public/preview-1.mov)
-
+![Превью](./public/preview-2.mov)
